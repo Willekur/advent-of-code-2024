@@ -36,7 +36,6 @@ func search_for_m(lines []string, y_pos int, x_pos int) int {
 			}
 		}
 	}
-
 	if y_pos+1 < height && lines[y_pos+1][x_pos] == 'M' {
 		if y_pos+2 < height && lines[y_pos+2][x_pos] == 'A' {
 			if y_pos+3 < height && lines[y_pos+3][x_pos] == 'S' {
@@ -72,9 +71,9 @@ func search_for_m(lines []string, y_pos int, x_pos int) int {
 			}
 		}
 	}
-	if y_pos-1 > 0 && x_pos+1 < width && lines[y_pos-1][x_pos+1] == 'M' {
-		if y_pos-2 > 0 && x_pos+2 < width && lines[y_pos-2][x_pos+2] == 'A' {
-			if y_pos-3 > 0 && x_pos+3 < width && lines[y_pos-3][x_pos+3] == 'S' {
+	if y_pos-1 >= 0 && x_pos+1 < width && lines[y_pos-1][x_pos+1] == 'M' {
+		if y_pos-2 >= 0 && x_pos+2 < width && lines[y_pos-2][x_pos+2] == 'A' {
+			if y_pos-3 >= 0 && x_pos+3 < width && lines[y_pos-3][x_pos+3] == 'S' {
 				counter += 1
 			}
 		}
